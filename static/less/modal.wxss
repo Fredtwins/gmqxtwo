@@ -1,0 +1,35 @@
+.modalx .ivu-modal .ivu-modal-content {
+  border-radius: 12px;
+  width: 316%;
+  margin-left: -452px;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-header {
+  border-radius: 12px 12px 0 0;
+  background: linear-gradient(#6bbaec, rgba(5, 123, 247, 0.76) 70%);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-header .ivu-modal-header-inner {
+  color: #fff;
+  text-align: center;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-close i {
+  color: #fff;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-body {
+  padding-top: 20px;
+  height: 560px;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-body li {
+  margin: 5px 0;
+  position: relative;
+  padding-left: 40px;
+}
+.modalx .ivu-modal .ivu-modal-content .ivu-modal-body li .departmentName {
+  position: absolute;
+  left: 0;
+  color: #303030;
+  font-weight: bold;
+}
