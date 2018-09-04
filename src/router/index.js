@@ -40,6 +40,9 @@ const stationDaysHoursCompare = () => import('components/statandquery/shikuang/s
 // 分雨量
 const fiveMinutesRainSum = () => import('components/statandquery/shikuang/fiveMinutesRainSum')
 
+// 时雨量
+const hourRainSum = () => import('components/statandquery/shikuang/hourRainSum')
+
 Vue.use(Router)
 
 export default new Router({
@@ -91,6 +94,9 @@ export default new Router({
             }, {
               path: '/main/statandquery/fiveMinutesRainSum',
               component: fiveMinutesRainSum
+            }, {
+              path:'/main/statandquery/hourRainSum',
+              component: hourRainSum
             }
           ]
         }

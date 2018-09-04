@@ -3,7 +3,7 @@
     <div class="heightMax">
       <div class="station">
         <Breadcrumb class="ml32">
-          <Breadcrumb-item class="black">报表统计</Breadcrumb-item>
+          <Breadcrumb-item class="black">统计分析</Breadcrumb-item>
           <Breadcrumb-item class="blue">分雨量</Breadcrumb-item>
         </Breadcrumb>
         <Collapse accordion value="1" class="aa">

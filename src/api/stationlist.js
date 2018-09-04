@@ -154,3 +154,18 @@ export function Getfiveminute (page = 1, search = {}) {
 
   return ajaxPost(url, data, options())
 }
+
+// 时雨量
+export function GetHourrain (page = 1, search = {}) {
+  let url = 'gmmeteo/datacenter/hourrainsum/list'
+
+  let data = {
+    page: page,
+    searchValue: {
+      ...search
+    },
+    system_id: '1000100'
+  }
+
+  return ajaxPost(url, data, options())
+}
