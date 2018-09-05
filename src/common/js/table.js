@@ -1072,3 +1072,92 @@ export function dayrainthead (that) {
     }
   ]
 }
+
+// 统计分析-风力风向图
+export function monthAvgtuthead (that) {
+  return [
+    {
+      title: '静风',
+      key: 'jingfeng',
+      width: 100,
+      align: 'center'
+    }, {
+      title: '北西北',
+      key: 'NNW',
+      align: 'center'
+    }, {
+      title: '西北',
+      key: 'NW',
+      align: 'center'
+    }, {
+      title: '西西北',
+      key: 'WNW',
+      align: 'center'
+    },
+    {
+      title: '西',
+      key: 'W',
+      align: 'center'
+    },
+    {
+      title: '西西南',
+      key: 'WSW',
+      align: 'center'
+    },
+    {
+      title: '西南',
+      key: 'SW',
+      align: 'center'
+    },
+    {
+      title: '南西南',
+      key: 'SSW',
+      align: 'center'
+    },
+    {
+      title: '南',
+      key: 'S',
+      align: 'center'
+    },
+    {
+      title: '南东南',
+      key: 'SSE',
+      align: 'center'
+    },
+    {
+      title: '东南',
+      key: 'SE',
+      align: 'center'
+    },
+    {
+      title: '东东南',
+      key: 'ESE',
+      align: 'center'
+    },
+    {
+      title: '东',
+      key: 'E',
+      align: 'center'
+    },
+    {
+      title: '东东北',
+      key: 'ENE',
+      align: 'center'
+    },
+    {
+      title: '东北',
+      key: 'NE',
+      align: 'center'
+    },
+    {
+      title: '北东北',
+      key: 'NNE',
+      align: 'center'
+    },
+    {
+      title: '北',
+      key: 'N',
+      align: 'center'
+    }
+  ]
+}

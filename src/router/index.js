@@ -43,6 +43,12 @@ const fiveMinutesRainSum = () => import('components/statandquery/shikuang/fiveMi
 // 时雨量
 const hourRainSum = () => import('components/statandquery/shikuang/hourRainSum')
 
+// 日雨量
+const dayRainSum = () => import('components/statandquery/shikuang/dayRainSum')
+
+// 风力风向图
+const monthAvgtu = () => import('components/statandquery/tongji/monthAvgtu')
+
 Vue.use(Router)
 
 export default new Router({
@@ -97,6 +103,12 @@ export default new Router({
             }, {
               path:'/main/statandquery/hourRainSum',
               component: hourRainSum
+            }, {
+              path: '/main/statandquery/dayRainSum',
+              component: dayRainSum
+            }, {
+              path: '/main/statandquery/monthAvgtu',
+              component: monthAvgtu
             }
           ]
         }

@@ -169,3 +169,21 @@ export function GetHourrain (page = 1, search = {}) {
 
   return ajaxPost(url, data, options())
 }
+
+// 日雨量
+export function GetDayrain (page = 1, search = {}) {
+  let url = 'gmmeteo/datacenter/dayrainsum/list'
+
+  let data = {
+    page: page,
+    order: {
+      count_20: -1
+    },
+    searchValue: {
+      ...search
+    },
+    system_id: '1000100'
+  }
+
+  return ajaxPost(url, data, options())
+}
