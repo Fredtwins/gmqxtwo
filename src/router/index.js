@@ -49,6 +49,9 @@ const dayRainSum = () => import('components/statandquery/shikuang/dayRainSum')
 // 风力风向图
 const monthAvgtu = () => import('components/statandquery/tongji/monthAvgtu')
 
+// 单站多要素对比图
+const singlemultielement = () => import('components/statandquery/tongji/singlemultielement')
+
 Vue.use(Router)
 
 export default new Router({
@@ -109,6 +112,9 @@ export default new Router({
             }, {
               path: '/main/statandquery/monthAvgtu',
               component: monthAvgtu
+            }, {
+              path: '/main/statandquery/singlemultielement',
+              component: singlemultielement
             }
           ]
         }

@@ -130,11 +130,11 @@ export default {
         .ivu-menu-item {
           // padding: 0 5px;
           flex: 1;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: bold;
           color: #fff;
           border-right: 1px solid #16a0eb;
-          padding-left: 25px;
+          padding-left: 0px;
           // background-image: url('../../../static/image/top/button.png');
           // background: linear-gradient(#1554cd,#1137a0);
           background-repeat: no-repeat;
