@@ -32,6 +32,7 @@
               <Button type="primary" @click="submitSearch(1)">搜索</Button>
               <!-- <Button style="float: right" type="primary" @click="exportExcel">导出excel表格</Button> -->
             </Form>
+            <h1 class="stationtitle">{{titlestation}}</h1>
             </template>
           </Panel>
         </Collapse>
@@ -53,6 +54,7 @@ import { ERR_OK } from 'api/config'
 export default {
   data () {
     return {
+      titlestation: '',
       formInline: {
         id: '',
         year: '',
@@ -87,6 +89,7 @@ export default {
       if (this.formInline.id) {
         search.stationid = this.formInline.id
       }
+      this.titlestation = search.stationid
       this._GetDayHourQuery(page, search)
     },
     // 选择年份
@@ -148,6 +151,11 @@ export default {
   padding-top: 8px;
   padding-right: 5px;
   float: right;
+}
+.stationtitle {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
 }
 </style>
 

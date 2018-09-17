@@ -60,7 +60,7 @@ export default {
     submitSearch () {
       let search = {}
       if (this.formInline.datetime) {
-        search.datetime = this.formInline.datetime
+        search.datetime = this.timeAgos
       }
       this._GetStationInstQuery(search)
     },
@@ -109,13 +109,15 @@ export default {
     var timec = new Date(time)
     var second = timec.getSeconds()
     var minutes = timec.getMinutes()
-    var temp = minutes % 5
-    var res = time - second * 1000 - 10 * 60 * 1000 - temp * 60 * 1000
+    var temp = minutes
+    var res = time - second * 1000 - temp * 60 * 1000
     this.timeAgo = res
     this.timeNew = timec
   },
   mounted() {
     this._GetStationInstQuery()
+    this.add()
+    this.del()
   }
 }
 </script>

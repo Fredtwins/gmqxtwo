@@ -320,12 +320,12 @@ export function HourQuerythead (that) {
 // 统计分析-单站多日同时
 export function Daywhilethead (that) {
   return [
-    {
-      title: '站号',
-      width: 80,
-      align: 'center',
-      key: 'stationid'
-    },
+    // {
+    //   title: '站号',
+    //   width: 80,
+    //   align: 'center',
+    //   key: 'stationid'
+    // },
     {
       title: '记录时间',
       key: 'datetime',
@@ -406,12 +406,12 @@ export function Daywhilethead (that) {
 // 统计分析-单站同日时极值
 export function DayHourExtremethead (that) {
   return [
-    {
-      title: '站号',
-      width: 80,
-      align: 'center',
-      key: 'stationid'
-    },
+    // {
+    //   title: '站号',
+    //   width: 80,
+    //   align: 'center',
+    //   key: 'stationid'
+    // },
     {
       title: '统计时间',
       key: 'datetime',
@@ -435,11 +435,11 @@ export function DayHourExtremethead (that) {
       title: '最高温出现时间',
       key: 'tmaxtime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.tmaxtime.substring(0, 16)
+            innerHTML: param.row.tmaxtime.substring(10, 16)
           }
         })
       }
@@ -453,11 +453,11 @@ export function DayHourExtremethead (that) {
       title: '最低温出现时间',
       key: 'tmintime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.tmintime.substring(0, 16)
+            innerHTML: param.row.tmintime.substring(10, 16)
           }
         })
       }
@@ -471,11 +471,11 @@ export function DayHourExtremethead (that) {
       title: '最大湿度出现时间',
       key: 'umaxtime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.umaxtime.substring(0, 16)
+            innerHTML: param.row.umaxtime.substring(10, 16)
           }
         })
       }
@@ -489,11 +489,11 @@ export function DayHourExtremethead (that) {
       title: '最小湿度出现时间',
       key: 'umintime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.umintime.substring(0, 16)
+            innerHTML: param.row.umintime.substring(10, 16)
           }
         })
       }
@@ -506,11 +506,11 @@ export function DayHourExtremethead (that) {
       title: '最高气压出现时间',
       key: 'pmaxtime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.pmaxtime.substring(0, 16)
+            innerHTML: param.row.pmaxtime.substring(10, 16)
           }
         })
       }
@@ -523,11 +523,11 @@ export function DayHourExtremethead (that) {
       title: '最低气压出现时间',
       key: 'pmintime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.pmintime.substring(0, 16)
+            innerHTML: param.row.pmintime.substring(10, 16)
           }
         })
       }
@@ -539,11 +539,11 @@ export function DayHourExtremethead (that) {
       title: '3秒最大瞬间风速出现时间',
       key: 'wf3smaxtime',
       align: 'center',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.wf3smaxtime.substring(0, 16)
+            innerHTML: param.row.wf3smaxtime.substring(10, 16)
           }
         })
       }
@@ -555,11 +555,11 @@ export function DayHourExtremethead (that) {
       title: '最大10分钟平均风速出现时间',
       align: 'center',
       key: 'wf10maxtime',
-      width: 100,
+      // width: 100,
       render: (h, param) => {
         return h('span', {
           domProps: {
-            innerHTML: param.row.wf10maxtime.substring(0, 16)
+            innerHTML: param.row.wf10maxtime.substring(10, 16)
           }
         })
       }
@@ -662,12 +662,13 @@ export function DayExtrmumthead (that) {
 // 统计分析-单站同日多时
 export function Hourcomparethead (that) {
   return [
+    // {
+    //   title: '站号',
+    //   key: 'stationid',
+    //   width: 80,
+    //   align: 'center'
+    // },
     {
-      title: '站号',
-      key: 'stationid',
-      width: 80,
-      align: 'center'
-    }, {
       title: '记录时间',
       key: 'datetime',
       align: 'center'
@@ -739,12 +740,13 @@ export function Hourcomparethead (that) {
 // 统计分析-单站多日
 export function DaycompareThead (that) {
   return [
+    // {
+    //   title: '站号',
+    //   width: 80,
+    //   align: 'center',
+    //   key: 'stationid'
+    // },
     {
-      title: '站号',
-      width: 80,
-      align: 'center',
-      key: 'stationid'
-    }, {
       title: '时间',
       key: 'datetime',
       align: 'center',
@@ -826,12 +828,12 @@ export function DaycompareThead (that) {
 // 统计分析-单站多日时极值
 export function DayHoursThead (that) {
   return [
-    {
-      title: '站号',
-      width: 80,
-      align: 'center',
-      key: 'stationid'
-    },
+    // {
+    //   title: '站号',
+    //   width: 80,
+    //   align: 'center',
+    //   key: 'stationid'
+    // },
     {
       title: '统计时间',
       key: 'datetime',
@@ -1158,6 +1160,124 @@ export function monthAvgtuthead (that) {
       title: '北',
       key: 'N',
       align: 'center'
+    }
+  ]
+}
+
+// 单站多要素对比图
+export function multielementThead (that) {
+  return [
+    {
+      title: '站号',
+      align: 'center',
+      width: 80,
+      sortable: true,
+      key: 'stationid'
+    }, {
+      title: '站点名称',
+      align: 'center',
+      key: 'station_name',
+      width: 260
+    }, {
+      title: '气温',
+      align: 'center',
+      key: 't',
+      width: 65,
+      sortable: true
+    }, {
+      title: '气压',
+      aign: 'center',
+      width: 80,
+      sortable: true,
+      key: 'p'
+    }, {
+      title: '相对湿度',
+      align: 'center',
+      width: 74,
+      key: 'u',
+      sortable: true
+    }, {
+      title: '电压',
+      align: 'center',
+      key: 'wpv',
+      sortable: true,
+      width: 74
+    }, {
+      title: '雨量',
+      align: 'center',
+      width: 74,
+      key: 'r24h',
+      sortable: true
+    }, {
+      title: '记录时间',
+      key: 'datetime',
+      align: 'center',
+      render: (h, param) => {
+        return h('span', {
+          domProps: {
+            innerHTML: param.row.datetime.substring(0, 16)
+          }
+        })
+      }
+    }
+  ]
+}
+
+// 单站同期历史对比图
+export function HistorcalThead (that) {
+  return [
+    {
+      title: '站号',
+      key: 'stationid',
+      width: 80,
+      sortable: true,
+      align: 'center'
+    }, {
+      title: '站点名称',
+      key: 'station_name',
+      width: 260,
+      align: 'center'
+    }, {
+      title: '气温',
+      key: 't',
+      sortable: true,
+      width: 65,
+      align: 'center'
+    }, {
+      title: '气压',
+      key: 'p',
+      sortable: true,
+      width: 80,
+      align: 'center'
+    }, {
+      title: '相对湿度',
+      key: 'u',
+      sortable: true,
+      align: 'center',
+      width: 74
+    }, {
+      title: '电压',
+      align: 'center',
+      width: 74,
+      sortable: true,
+      key: 'wpv'
+    }, {
+      title: '雨量',
+      key: 'r24h',
+      width: 74,
+      sortable: true,
+      align: 'center'
+    }, {
+      title: '记录时间',
+      align: 'center',
+      key: 'datetime',
+      render: (h, param) => {
+        return h('span', {
+          domProps: {
+            innerHTML: param.row.datetime.substring(0, 16)
+          }
+        })
+      }
     }
   ]
 }

@@ -20,3 +20,45 @@ export function GetmonthAvgtu (page = 1, search = {}) {
 
   return ajaxPost(url, data, options())
 }
+
+// 单站多要素对比图
+export function Getmultielement (search = {}) {
+  let url = 'gmmeteo/datacenter/stationinstquery/list'
+
+  let data = {
+    searchValue: {
+      ...search
+    },
+    system_id: '1000100'
+  }
+
+  return ajaxPost(url, data, options())
+}
+
+// 单站同期历史对比图
+export function GetHistorcal (search = {}) {
+  let url = 'gmmeteo/datacenter/stationinstquery/list'
+
+  let data = {
+    searchValue: {
+      ...search
+    },
+    system_id: '1000100'
+  }
+
+  return ajaxPost(url, data, options())
+}
+
+// 单站同期历史对比图（echarts）
+export function GetHisEcharts (search = {}) {
+  let url = 'gmmeteo/datacenter/singleHistoricalPeriod/list'
+
+  let data = {
+    searchValue: {
+      ...search
+    },
+    system_id: '1000100'
+  }
+
+  return ajaxPost(url, data, options())
+}

@@ -31,6 +31,7 @@
               </Form-item>
               <Button type="primary" @click="submitSearch(1)">搜索</Button>
             </Form>
+            <h1 class="stationtitle">{{titlestation}}</h1>
             </template>
           </Panel>
         </Collapse>
@@ -52,6 +53,7 @@ import { ERR_OK } from 'api/config'
 export default {
   data () {
     return {
+      titlestation: '',
       current: 1,
       total: 0,
       formInline: {
@@ -83,6 +85,7 @@ export default {
       if (this.formInline.hour) {
         search.hour = this.formInline.hour
       }
+      this.titlestation = search.stationid
       this._GetDayHourscompare(page, search)
     },
     changePage (page) {
@@ -119,5 +122,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.stationtitle {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
+}
 </style>

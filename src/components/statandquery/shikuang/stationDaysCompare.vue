@@ -42,6 +42,7 @@
               </Form-item>
               <Button type="primary" @click="submitSearch(1)">搜索</Button>
             </Form>
+            <h1 class="stationtitle">{{titlestation}}</h1>
             </template>
           </Panel>
         </Collapse>
@@ -63,6 +64,7 @@ import { GetDaycompare, GettownList } from 'api/stationlist'
 export default {
   data () {
     return {
+      titlestation: '',
       stationList: [],
       formInline: {
         id: '',
@@ -98,6 +100,7 @@ export default {
       if (this.formInline.month) {
         search.month = parseInt(this.formInline.month)
       }
+      this.titlestation = search.stationid
       this._GetDaycompare(page, search)
     },
     // 站名下拉框
@@ -134,7 +137,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.stationtitle {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
+}
 </style>
 
 

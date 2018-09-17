@@ -30,6 +30,7 @@
 								<Button type="error" @click="del">-1日</Button>
 								<Button type="primary" @click="submitSearch">搜索</Button>
             </Form>
+            <h1 class="stationtitle">{{titlestation}}</h1>
             </template>
           </Panel>
         </Collapse>
@@ -49,6 +50,7 @@ import { timeFilter } from 'common/js/util'
 export default {
   data () {
     return {
+      titlestation: '',
       formInline: {
         id: '',
         datetime: '',
@@ -77,6 +79,7 @@ export default {
       if (this.formInline.time_type === '2') {
         search.minute = 0
       }
+      this.titlestation = search.stationid
       this._GetHourcompare(search)
     },
     // 表格显示
@@ -135,5 +138,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.stationtitle {
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
+}
 </style>

@@ -52,6 +52,9 @@ const monthAvgtu = () => import('components/statandquery/tongji/monthAvgtu')
 // 单站多要素对比图
 const singlemultielement = () => import('components/statandquery/tongji/singlemultielement')
 
+// 单站历史同期对比图
+const singleHistoricalPeriod = () => import('components/statandquery/tongji/singleHistoricalPeriod')
+
 Vue.use(Router)
 
 export default new Router({
@@ -115,6 +118,9 @@ export default new Router({
             }, {
               path: '/main/statandquery/singlemultielement',
               component: singlemultielement
+            }, {
+              path: '/main/statandquery/singleHistoricalPeriod',
+              component: singleHistoricalPeriod
             }
           ]
         }
