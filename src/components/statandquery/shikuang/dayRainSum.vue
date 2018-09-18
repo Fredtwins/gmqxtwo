@@ -17,8 +17,8 @@
                 </Select>
               </Form-item>
               <Form-item label="时间段">
-                <Date-picker type="datetime" v-model="formInline.datetime1" @on-change="datetimeChange1"></Date-picker>&nbsp;至&nbsp;
-                <Date-picker type="datetime" v-model="formInline.datetime2" @on-change="datetimeChange2"></Date-picker>
+                <Date-picker type="date" v-model="formInline.datetime1" @on-change="datetimeChange1"></Date-picker>&nbsp;至&nbsp;
+                <Date-picker type="date" v-model="formInline.datetime2" @on-change="datetimeChange2"></Date-picker>
               </Form-item>
               <Button type="primary" @click="submitSearch(1)">搜索</Button>
             </Form>
