@@ -17,7 +17,7 @@
 									</Select>
 								</Form-item>
 								<Form-item label="时间">
-									<Date-picker :value="datetimers" type="datetime" v-model="formInline.datetime" @on-change="datetimeChange1">
+									<Date-picker :value="datetimers" type="date" v-model="formInline.datetime" @on-change="datetimeChange1">
 									</Date-picker>
 								</Form-item>
 								<Form-item label="时间间隔">

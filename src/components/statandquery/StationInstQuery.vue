@@ -16,8 +16,8 @@
               </Form-item>
               <Button type="primary" @click="add">+1日</Button>
               <Button type="error" @click="del">-1日</Button>
-              <Button type="primary" @click="adds">+5分钟</Button>
-              <Button type="error" @click="dels">-5分钟</Button> &nbsp;&nbsp;&nbsp;
+              <Button type="primary" @click="adds">+1小时</Button>
+              <Button type="error" @click="dels">-1小时</Button> &nbsp;&nbsp;&nbsp;
               <Button type="primary" @click="submitSearch">搜索</Button>
               <!-- <Button style="float: right" type="primary" @click="exportExcel">导出excel表格</Button> -->
             </Form>
@@ -78,16 +78,16 @@ export default {
       this.formInline.datetime = time
       this.timeAgos = this.formInline.datetime
     },
-    // 加五分钟
+    // 加一小时
     adds () {
-      this.timeAgo = this.timeAgo + 60 * 5 * 1000
+      this.timeAgo = this.timeAgo + 60 * 60 * 1000
       let time = timeFilter(new Date(this.timeAgo), 'yyyy-MM-dd HH:mm:ss')
       this.formInline.datetime = time
       this.timeAgos = this.formInline.datetime
     },
-    // 减五分钟
+    // 减一小时
     dels () {
-      this.timeAgo = this.timeAgo - 60 * 5 * 1000
+      this.timeAgo = this.timeAgo - 60 * 60 * 1000
       let time = timeFilter(new Date(this.timeAgo), 'yyyy-MM-dd HH:mm:ss')
       this.formInline.datetime = time
       this.timeAgos = this.formInline.datetime

@@ -17,8 +17,11 @@
                 </Select>
               </Form-item>
               <Form-item label="时间段">
-                <Date-picker type="datetime" v-model="formInline.datetime1" @on-change="datetimeChange1"></Date-picker>&nbsp至&nbsp
-                <Date-picker type="datetime" v-model="formInline.datetime2" @on-change="datetimeChange2"></Date-picker>
+                <Date-picker type="date" v-model="formInline.datetime1" @on-change="datetimeChange1"></Date-picker>
+                <TimePicker format="HH:mm" placeholder="时分" style="width: 112px" @on-change="datechange1"></TimePicker>
+                &nbsp;至&nbsp;
+                <Date-picker type="date" v-model="formInline.datetime2" @on-change="datetimeChange2"></Date-picker>
+                <TimePicker format="HH:mm" placeholder="时分" style="width: 112px" @on-change="datechange2"></TimePicker>
               </Form-item>
               <Button type="primary" @click="submitSearch(1)">搜索</Button>
             </Form>
@@ -53,7 +56,9 @@ export default {
       dataSourceList: [],
       theadArr: FiveMinutesThead(this),
       total: 0,
-      current: 1
+      current: 1,
+      dateform: '',
+      dateformtow: ''
     }
   },
   methods: {
@@ -83,6 +88,7 @@ export default {
       }
       if (this.formInline.datetime1 || this.formInline.datetime2) {
         search.datetime = this.formInline.datetime1 + '|#|' + this.formInline.datetime2
+        search.datetime = `${this.formInline.datetime1} ${this.dateform}:00|#|${this.formInline.datetime2} ${this.dateformtow}:00`
       }
       this._Getfiveminute(page, search)
     },
@@ -96,6 +102,13 @@ export default {
     },
     datetimeChange2 (datetime) {
       this.formInline.datetime2 = datetime
+    },
+    // 选择时分
+    datechange1 (date) {
+      this.dateform = date
+    },
+    datechange2 (date) {
+      this.dateformtow = date
     }
   },
   mounted() {
