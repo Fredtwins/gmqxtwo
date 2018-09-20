@@ -43,6 +43,9 @@ export function GetHistorcal (search = {}) {
     searchValue: {
       ...search
     },
+    order: {
+      datetime: -1
+    },
     system_id: '1000100'
   }
 
@@ -56,6 +59,9 @@ export function GetHisEcharts (search = {}) {
   let data = {
     searchValue: {
       ...search
+    },
+    order: {
+      datetime: -1
     },
     system_id: '1000100'
   }
