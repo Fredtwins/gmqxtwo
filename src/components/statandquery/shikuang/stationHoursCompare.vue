@@ -74,7 +74,7 @@ export default {
         search.stationid = this.formInline.id
       }
       if (this.formInline.datetime) {
-        search.datetime = this.formInline.datetime
+        search.datetime = this.timeAgos
       }
       if (this.formInline.time_type === '2') {
         search.minute = 0
@@ -102,15 +102,15 @@ export default {
     },
     // 加一日
     add () {
-      this.timeAgo = this.timeAgo + 24 * 60 * 60 * 1000
       let time = timeFilter(new Date(this.timeAgo), 'yyyy-MM-dd HH:mm:ss')
+      this.timeAgo = this.timeAgo + 24 * 60 * 60 * 1000
       this.formInline.datetime = time
       this.timeAgos = this.formInline.datetime
     },
     // 减一日
     del () {
-      this.timeAgo = this.timeAgo - 24 * 60 * 60 * 1000
       let time = timeFilter(new Date(this.timeAgo), 'yyyy-MM-dd HH:mm:ss')
+      this.timeAgo = this.timeAgo - 24 * 60 * 60 * 1000
       this.formInline.datetime = time
       this.timeAgos = this.formInline.datetime
     },
@@ -125,14 +125,16 @@ export default {
     var timec = new Date(time)
     var second = timec.getSeconds()
     var minutes = timec.getMinutes()
-    var temp = minutes % 5
-    var res = time - second * 1000 - 10 * 60 * 1000 - temp * 60 * 1000
+    var temp = minutes
+    var res = time
     this.timeAgo = res
     this.timeNew = timec
+    this.add()
   },
   mounted() {
     this._GetHourcompare()
     this._GettownList()
+    this.del()
   }
 }
 </script>

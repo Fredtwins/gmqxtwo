@@ -87,7 +87,7 @@ export default {
         search.stationid = this.formInline.id
       }
       if (this.formInline.datetime1 || this.formInline.datetime2) {
-        search.datetime = this.formInline.datetime1 + '|#|' + this.formInline.datetime2
+        // search.datetime = this.formInline.datetime1 + '|#|' + this.formInline.datetime2
         search.datetime = `${this.formInline.datetime1} ${this.dateform}:00|#|${this.formInline.datetime2} ${this.dateformtow}:00`
       }
       this._Getfiveminute(page, search)

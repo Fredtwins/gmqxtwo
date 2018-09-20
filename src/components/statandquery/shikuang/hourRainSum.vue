@@ -19,13 +19,13 @@
               <Form-item label="时间">
                 <Date-picker type="date" v-model="formInline.datetime1" @on-change="datetimeChange1"></Date-picker>
                 &nbsp;&nbsp;&nbsp;
-                <Select v-model="formInline.hour" style="width:160px">
+                <Select v-model="formInline.hour" style="width:160px" placeholder="请选择小时">
                   <Option v-for="item in hourformArray" :key="item.index" :value="item"></Option>
                 </Select>
                 &nbsp;至&nbsp;
                 <Date-picker type="date" v-model="formInline.datetime2" @on-change="datetimeChange2"></Date-picker>
                  &nbsp;&nbsp;&nbsp;
-                <Select v-model="formInline.hours" style="width:160px">
+                <Select v-model="formInline.hours" style="width:160px" placeholder="请选择小时">
                   <Option v-for="item in hoursformArray" :key="item.index" :value="item"></Option>
                 </Select>
               </Form-item>
